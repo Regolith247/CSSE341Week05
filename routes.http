@@ -1,0 +1,43 @@
+@@ -5,12 +5,46 @@ GET http://localhost:8080/contacts
+####
+GET http://localhost:8080/contacts/626dfffdc29ea86894009ac3
+###
+GET http://localhost:8080/contacts/626dfffdc29ea86894009ac4
+###
+GET http://localhost:8080/contacts/626dfffdc29ea86894009ac5
+// The blank line between the header and the body is extremely important- without it you will get an error message.
+POST http://localhost:8080/contacts HTTP/1.1 content-type: application/json
+
+{
+    "firstName":"Bob","lastName":"Evans","email":"Bob@emailplace","favoriteColor":"Black", "birthday":"09/03/00"
+}
+### 
+PUT contact PUT http://localhost:8080/contacts/6276df27c825155420108c49 HTTP/1.1 content-type: application/json
+
+{
+"firstName":"Suzy", "lastName":"Wallace", "email":"Suzy@emailplace", "favoriteColor":"red", "birthday":"01/01/99"
+}
+
+// PRODUCTION Deploy 
+### Get all contacts 
+GET https://cs341week2.herokuapp.com/contacts
+
+### Get contact by id 
+GET https://cs341week2.herokuapp.com/contacts/6276df27c825155420108c49
+
+### Create contact 
+POST https://cs341week2.herokuapp.com/contacts HTTP/1.1 content-type: application/json
+
+{
+ "firstName":"Bob","lastName":"Evans","email":"Bob@emailplace","favoriteColor":"Black", "birthday":"09/03/00"
+}
+
+### PUT contact 
+PUT https://cs341week2.herokuapp.com/contacts/6220bcb39cd507e920c75a0b HTTP/1.1 content-type: application/json
+
+{
+"firstName":"Suzy", "lastName":"Wallace", "email":"Suzy@emailplace", "favoriteColor":"red", "birthday":"01/01/99"
+}
+
+### DELETE contact 
+DELETE https://cs341week2.herokuapp.com/contacts/6220e34083149913680f9a64 HTTP/1.1
