@@ -1,6 +1,6 @@
 module.exports = (mongoose) => {
-    const Contact = mongoose.model(
-      'contacts',
+    const User = mongoose.model(
+      'users',
       mongoose.Schema(
         {
           temple_id: Number,
@@ -13,6 +13,6 @@ module.exports = (mongoose) => {
       )
     );
   
-    return Contact;
+    return User;
   };
   

@@ -1,19 +1,18 @@
-
-GET http://localhost:8080/contacts
+@@ -5,12 +5,46 @@ GET http://localhost:8080/users
 ####
-GET http://localhost:8080/contacts/626dfffdc29ea86894009ac3
+GET http://localhost:8080/users/6289c02cb759ba0ee3cf0897
 ###
-GET http://localhost:8080/contacts/626dfffdc29ea86894009ac4
+GET http://localhost:8080/users/6289c02cb759ba0ee3cf0898
 ###
-GET http://localhost:8080/contacts/626dfffdc29ea86894009ac5
+GET http://localhost:8080/users/6289c02cb759ba0ee3cf0899
 // The blank line between the header and the body is extremely important- without it you will get an error message.
-POST http://localhost:8080/contacts HTTP/1.1 content-type: application/json
+POST http://localhost:8080/users HTTP/1.1 content-type: application/json
 
 {
     "firstName":"Bob","lastName":"Evans","email":"Bob@emailplace","favoriteColor":"Black", "birthday":"09/03/00"
 }
 ### 
-PUT contact PUT http://localhost:8080/contacts/6276df27c825155420108c49 HTTP/1.1 content-type: application/json
+PUT contact PUT http://localhost:8080/users/6276df27c825155420108c49 HTTP/1.1 content-type: application/json
 
 {
 "firstName":"Suzy", "lastName":"Wallace", "email":"Suzy@emailplace", "favoriteColor":"red", "birthday":"01/01/99"
@@ -21,24 +20,24 @@ PUT contact PUT http://localhost:8080/contacts/6276df27c825155420108c49 HTTP/1.1
 
 // PRODUCTION Deploy 
 ### Get all contacts 
-GET https://cs341week2.herokuapp.com/contacts
+GET https://cs341week2.herokuapp.com/users
 
 ### Get contact by id 
-GET https://cs341week2.herokuapp.com/contacts/6276df27c825155420108c49
+GET https://cs341-week5.herokuapp.com/users/6289c02cb759ba0ee3cf0897
 
 ### Create contact 
-POST https://cs341week2.herokuapp.com/contacts HTTP/1.1 content-type: application/json
+POST https://cs341week2.herokuapp.com/users HTTP/1.1 content-type: application/json
 
 {
  "firstName":"Bob","lastName":"Evans","email":"Bob@emailplace","favoriteColor":"Black", "birthday":"09/03/00"
 }
 
 ### PUT contact 
-PUT https://cs341week2.herokuapp.com/contacts/6220bcb39cd507e920c75a0b HTTP/1.1 content-type: application/json
+PUT https://cs341week2.herokuapp.com/users/6220bcb39cd507e920c75a0b HTTP/1.1 content-type: application/json
 
 {
 "firstName":"Suzy", "lastName":"Wallace", "email":"Suzy@emailplace", "favoriteColor":"red", "birthday":"01/01/99"
 }
 
 ### DELETE contact 
-DELETE https://cs341week2.herokuapp.com/contacts/6220e34083149913680f9a64 HTTP/1.1
+DELETE https://cs341week2.herokuapp.com/users/6220e34083149913680f9a64 HTTP/1.1
